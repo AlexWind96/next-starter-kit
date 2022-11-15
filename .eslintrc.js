@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@next/next/recommended',
     'plugin:jest/recommended',
     'plugin:storybook/recommended',
+    'prettier',
   ],
   plugins: ['testing-library', 'jest'],
   overrides: [
@@ -17,5 +18,16 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        '': 'never',
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
-};
+}
